@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggest</title>
+    <style>
+        html {
+            font-family: "Anta", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .navbar{
+            width: 100vw;
+            background-color: grey;
+ 
+        }
+        .navbar-list {
+            display : flex;
+            flex-direction: row;
+            gap: 0px 100px;
+        }
+        .navbar-list > li {
+            list-style-type: none;
+        }
+        .navbar-list > li > a {
+            text-decoration: none;
+            color: black;
+        }
+        .container {
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+            gap: 150px 170px;
+            justify-content: center;
+        }
+        .container2{
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+            gap: 150px 170px;
+            justify-content: center;
+        }
+        .circle {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            border-radius: 50%;
+            border: 3px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .circle-content {
+            position: relative;
+            font-size: 18px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .circle-content > a{
+            text-decoration: none;
+        }
+        table{
+            width: 100%;
+            text-align: center;
+        }
+        img{
+            border-radius: 45 px;
+        }
+        .ci{
+            width: 200px; /* Set the desired size of the circle */
+            height: 200px;
+            overflow: hidden;
+            border-radius: 50%; /* Create a circular shape */
+        }
+        .custom-button {
+            display: inline-block;
+            padding: 15px 20px; /* Adjust the padding for more spacing */
+            font-size: 18px; /* Set the desired font size */
+            border: none;
+            border-radius: 10px; /* Set the desired border radius for rounded corners */
+            background-color: #3498db; /* Set the background color */
+            color: #ffffff; /* Set the text color */
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <br><br><br><br><br><br><br><br><br><br>
+    <table>
+        <tr>
+            <td>
+                <center>
+                <div class="circ">
+                    
+                    <h2 class="ci"><img src="https://qph.cf2.quoracdn.net/main-qimg-52cf83fd9c304003014facb1d2f809f7" height="200 px" width="200 px" alt ="Student Image"></h2>
+                    
+                </div>
+            </center>
+
+            </td>
+            <td>
+            <center>
+                <div class="cir">
+                    <h2 class="ci"><img src="https://img.freepik.com/premium-photo/teacher-teaches-students-ai-generated-image_20029-2645.jpg" height="200 px" width="200 px" alt ="Teacher Image"></h2>
+                    
+                </div>
+            </center>
+
+            </td>
+            <td>
+            <center>
+                <div class="cir">
+                    <h2 class="ci"><img src="https://images.shiksha.com/mediadata/ugcDocuments/images/wordpressImages/2023_08_mr_ai__a_person_working_as_a_voice_over_artist_show_pair_of_he_b0564346-ecab-44e9-befa-95a124443322.jpg" height="200 px" width="200 px" alt ="Profeesional Image"></h2>
+                    
+                </div>
+            </center>
+
+
+            </td>
+
+        </tr>
+        <tr><td> </td><td></td><td> </td></tr>
+        <tr><td> </td><td></td><td> </td></tr>
+        
+        <tr><td> </td><td></td><td> </td></tr>
+        
+        <tr><td> </td><td></td><td> </td></tr>
+        
+        <tr><td> </td><td></td><td> </td></tr>
+        
+        <tr><td> </td><td></td><td> </td></tr>
+        
+        <tr><td> </td><td></td><td> </td></tr>
+        
+        <tr><td> </td><td></td><td> </td></tr>
+        
+        <tr><td> </td><td></td><td> </td></tr>
+        <tr>
+            <td class="gk">
+                <a href="/student_suggest"><button class="custom-button">Student</button></a>
+
+
+            </td>
+            <td class="gk">
+                <a href="/teacher_suggest"><button class="custom-button">Teacher</button></a>
+
+            </td>
+            <td class="gk">
+                <a href="/it_suggest"><button class="custom-button">Professional</button></a>
+
+            </td>
+
+        </tr>
+    </table>
+</body>
+</html>

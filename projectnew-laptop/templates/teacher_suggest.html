@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Page</title>
+    <style>
+        .navbar{
+            width: 100vw;
+            background-color: grey;
+ 
+        }
+        .navbar-list {
+            display : flex;
+            flex-direction: row;
+            gap: 0px 100px;
+        }
+        .navbar-list > li {
+            list-style-type: none;
+        }
+        .navbar-list > li > a {
+            text-decoration: none;
+        }
+        /* .submission-form {
+            width: 100vw;
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .submission-form > div > label {
+            font-size: 26px;
+        }
+        .submission-form > div > select {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 80vw;
+            font-size: 1.15rem;
+            padding: 0.675em 6em 0.675em 1em;
+            background-color: #fff;
+            border: 1px solid #caced1;
+            border-radius: 0.25rem;
+            color: #000;
+            cursor: pointer;
+        } */
+        .gopal{
+            padding-bottom: 50px;
+         }
+         .custom-buttons {
+            display: inline-block;
+            padding: 15px 20px; /* Adjust the padding for more spacing */
+            font-size: 18px; /* Set the desired font size */
+            border: none;
+            border-radius: 10px; /* Set the desired border radius for rounded corners */
+            background-color: green; /* Set the background color */
+            color: #ffffff; /* Set the text color */
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        container{
+            padding-left: 30px;
+         }
+    </style>
+</head>
+{% include 'navbar.html' %}
+<body>
+    <br><br><br><br>
+    <center>
+    <h1>Teacher Suggestion Page</h1>
+</center>
+    <div class="container">
+        <form class="submission-form" method="POST" id="teacherQuestionDiv">
+            <div class="gopal">
+                <label>Intended Use:</label>
+                <select name="Intended_Use_label">
+                    <option value="0">Empowering Education  ( Studying )'</option>
+                    <option value="1">Enabling Knowledge    ( Studying )</option>
+                    <option value="2">Facilitating Learning  ( Studying )</option>
+                    <option value="3">Cultivating Minds       ( Studying )</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Preferred Brands:</label>
+                <select name="Preferred_Brands_label">
+                    <option value="0">Trusted Traditions    ( dell, Hp, Asus)</option>
+                    <option value="1">Pedagogical Picks      ( dell, Apple, Hp)</option>
+                    <option value="2">Educational Elegance   ( dell, Hp, Asus)</option>
+                    <option value="3">Scholarly Selections    ( dell, Hp)</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Processor Performance:</label>
+                <select name="Processor_Performance_label">
+                    <option value="0">'Essential Efficiency  (Intel Core i3 or equivalent AMD)'</option>
+                    <option value="1">Pedagogical Prowess   (Intel Core i5 or equivalent AMD Ryzen 5)</option>
+                    <option value="2">Scholarly Speed        (Intel Core i7/i9 or equivalent AMD Ryzen 7/9)</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Budget Range:</label>
+                <select name="Budget_Range_label">
+                    <option value="0">Thoughtful Investment (Under 40k)</option>
+                    <option value="1">Midrange Mentorship  (40k - 55k)</option>
+                    <option value="2">Educator\'s Elegance  (55k - 70k)</option>
+                    <option value="3">Priceless Pedagogy  (70k - 85k)</option>
+                    <option value="4">Academic Opulence   (85k above)</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Operating System:</label>
+                <select name="Operating_System_label">
+                    <option value="0">Windows Wisdom      (windows)</option>
+                    <option value="1">macOS Mastery        (mac)</option>
+                    <option value="2">Linux Learning Journey (linux)</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>RAM Requirement:</label>
+                <select name="RAM_Requirement_label">
+                    <option value="0">Knowledgeable Capacity (4GB - 8GB)</option>
+                    <option value="1">Educative Excellence   (8GB - 16GB)</option>
+                    <option value="2">Scholarly Supremacy    (16GB+)</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Storage Space:</label>
+                <select name="Storage_Space_label">
+                    <option value="0">Data Discernment     (128GB - 256GB)</option>
+                    <option value="1">Academic Archives    (256GB - 512GB)</option>
+                    <option value="2">Scholarly Storehouse (512GB - 1TB)</option>
+                    <option value="3">Limitless Learning   (1TB+)</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Screen Size:</label>
+                <select name="Screen_Size_label">
+                    <option value="0">Compact Class         (11 - 13 inches)</option>
+                    <option value="1">Scholarly Standard    (14 - 15 inches)</option>
+                    <option value="2">Grandeur of Knowledge (15+ inches)</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Graphics Usage:</label>
+                <select name="Graphics_Usage_label">
+                    <option value="0">Visualizing Concepts (Light gaming)</option>
+                    <option value="1">Multimedia Maven     (Moderate gaming and video editing)</option>
+                    <option value="2">Academic Artistry    (Heavy gaming and pro editing)</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Display Type:</label>
+                <select name="Display_Type_label">
+                    <option value="0">Illuminating IPS (For better color)</option>
+                    <option value="1">Teaching in Tune (TN for faster response)</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Display Resolution:</label>
+                <select name="Display_Resolution_label">
+                    <option value="0">Standard Precision (HD - 1366 x 768)</option>
+                    <option value="1">Professional Pixels (Full HD - 1920 x 1080)</option>
+                    <option value="2">Executive Vision (QHD or higher)</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Portability:</label>
+                <select name="Portability_label">
+                    <option value="0">Agile Academia     (Very important)</option>
+                    <option value="1">Mentor on the Move (Moderate)</option>
+                    <option value="2">Unfazed by Weight  (Not a priority)</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Battery Life:</label>
+                <select name="Battery_Life_label">
+                    <option value="0">Lecture Marathon     (Long battery life)</option>
+                    <option value="1">Day-to-Day Discourse (Moderate battery life)</option>
+                    <option value="2">Perpetually Plugged  (Not a concern)</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Touchscreen:</label>
+                <select name="Touchscreen_label">
+                    <option value="0">Interactive Insights (Yes, I prefer a touchscreen)</option>
+                    <option value="1">Traditional Teaching (No, I don\'t need a touchscreen)</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Ports & Connectivity:</label>
+                <select name="Ports_Connectivity_label">
+                    <option value="0">USB-C Collaborations</option>
+                    <option value="1">HDMI Harmony</option>
+                    <option value="2">SD Card Synergy</option>
+                    <option value="3">Thunderbolt for Thought Leadership</option>
+                    <option value="4">Surprise me with Connectivity!</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Upgradability:</label>
+                <select name="Upgradability_label">
+                    <option value="0">Pinnacle of Pedagogy   (I love upgrades!)</option>
+                    <option value="1">Curriculum Contentment (Upgradability is not a priority)</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Keyboard Type:</label>
+                <select name="Keyboard_Type_label">
+                    <option value="0">Standard Script</option>
+                    <option value="1">Enlightened Backlight</option>
+                    <option value="2">Scholarly Switches</option>
+                </select>
+                </div>
+            <div class="gopal">
+                <label>Security Features:</label>
+                <select name="Security_Features_label">
+                    <option value="0">Biometric Brilliance  (Fingerprint reader)</option>
+                    <option value="1">Wisdom in Passwords   (No specific need)</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Warranty & Support:</label>
+                <select name="Warranty_Support_label">
+                    <option value="0">Timeless Teaching Assurance (Longer warranty, premium support)</option>
+                    <option value="1">Standard Support Suffices   (Standard warranty is sufficient)</option>
+                </select>
+            </div>
+            <div ><button type="submit" class="custom-buttons">Submit</button></div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            font-family: "Anta", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .navbar{
+            width: 100vw;
+            background-color: grey;
+ 
+        }
+        .navbar-list {
+            display : flex;
+            flex-direction: row;
+            gap: 0px 100px;
+        }
+        .navbar-list > li {
+            list-style-type: none;
+        }
+        .navbar-list > li > a {
+            text-decoration: none;
+        }
+        .container{
+            width: 95vw;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+        }
+        .card{
+            background-color: grey;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% if laptops %}
+        <h2>Suggestions</h2>
+        {% for laptop in laptops %}
+        <!-- name, price, brand, ram, GPU -->
+        <div class="card">
+            <h4>{{laptop.name}}</h4>
+            <strong>{{laptop.price}}</strong>
+            <p>{{laptop.brand}}</p>
+            <span>{{laptop.ram}}</span>
+            <span>{{laptop.GPU}}</span>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+</body>
+</html>

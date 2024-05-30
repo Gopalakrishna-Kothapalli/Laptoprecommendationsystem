@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Page</title>
+    <style>
+        html {
+            font-family: "Anta", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .navbar{
+            width: 100vw;
+            background-color: grey;
+ 
+        }
+        .navbar-list {
+            display : flex;
+            flex-direction: row;
+            gap: 0px 100px;
+        }
+        .navbar-list > li {
+            list-style-type: none;
+        }
+        .navbar-list > li > a {
+            text-decoration: none;
+        }
+        /* .submission-form {
+            width: 100vw;
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .submission-form > div > label {
+            font-size: 26px;
+        }
+        .submission-form > div > select {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 80vw;
+            font-size: 1.15rem;
+            padding: 0.675em 6em 0.675em 1em;
+            background-color: #fff;
+            border: 1px solid #caced1;
+            border-radius: 0.25rem;
+            color: #000;
+            cursor: pointer;
+        } */
+        .custom-buttons {
+            display: inline-block;
+            padding: 15px 20px; /* Adjust the padding for more spacing */
+            font-size: 18px; /* Set the desired font size */
+            border: none;
+            border-radius: 10px; /* Set the desired border radius for rounded corners */
+            background-color: green; /* Set the background color */
+            color: #ffffff; /* Set the text color */
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .gopal{
+            padding-bottom: 50px;
+         }
+         .container{
+            padding-left: 30px;
+         }
+    </style>
+</head>
+
+{% include 'navbar.html' %}
+<body>
+    <br><br><br><br>
+    <center>
+    <h1>IT Professional Suggestion Page</h1>
+</center>
+    <div class="container">
+        <form method="POST" class="submission-form" id="itProfQuestionDiv">
+            <div class="gopal">
+                <label>Intended Use:</label>
+                <select name="Intended_Use_label">
+                    <option value="0">Strategic Solutions</option>
+                    <option value="1">Professional Programming</option>
+                    <option value="2">Business Brilliance</option>
+                    <option value="3">Career Crafting</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Preferred Brands:</label>
+                <select name="Preferred_Brands_label">
+                    <option value="0">Executive Excellence (Dell, HP, ASUS)</option>
+                    <option value="1">Corporate Class (Apple, Dell, HP)</option>
+                    <option value="2">Professional Prestige (Apple)</option>
+                    <option value="3">Business Elite (Any)</option>
+                </select>
+            </div>
+            <div class="gopal">
+            <label>Processor Performance:</label>
+                <select name="Processor_Performance_label">
+                    <option value="0">Business Basics (Intel Core i3 or equivalent AMD)</option>
+                    <option value="1">Corporate Capability (Intel Core i5 or equivalent AMD Ryzen 5)</option>
+                    <option value="2">Professional Powerhouse (Intel Core i7/i9 or equivalent AMD Ryzen 7/9)</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Budget Range:</label>
+                <select name="Budget_Range_label">
+                    <option value="0">Cost-Effective Professionalism (Under 40k)</option>
+                    <option value="1">Executive Elegance (40k - 55k)</option>
+                    <option value="2">Corporate Class (55k - 70k)</option>
+                    <option value="3">Premium Professionalism (70k - 85k)</option>
+                    <option value="4">Executive Opulence (85k above)</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Operating System:</label>
+                <select name="Operating_System_label">
+                    <option value="0">Windows Workplace</option>
+                    <option value="1">macOS Management</option>
+                    <option value="2">Linux Leadership</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>RAM Requirement:</label>
+                <select name="RAM_Requirement_label">
+                    <option value="0">Business Basics (4GB - 8GB)</option>
+                    <option value="1">Corporate Capacity (8GB - 16GB)</option>
+                    <option value="2">Executive Endurance (16GB+)</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Storage Space:</label>
+                <select name="Storage_Space_label">
+                    <option value="0">Storage Savvy (128GB - 256GB)</option>
+                    <option value="1">Corporate Archives (256GB - 512GB)</option>
+                    <option value="2">Professional Repository (512GB - 1TB)</option>
+                    <option value="3">Infinite Innovation (1TB+)</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Screen Size:</label>
+                <select name="Screen_Size_label">
+                    <option value="0">Compact Efficiency (11 - 13 inches)</option>
+                    <option value="1">Corporate Standard (14 - 15 inches)</option>
+                    <option value="2">Executive Grandeur (15+ inches)</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Graphics Usage:</label>
+                <select name="Graphics_Usage_label">
+                    <option value="0">Business Casual (Light gaming)</option>
+                    <option value="1">Corporate Creativity (Moderate gaming and video editing)</option>
+                    <option value="2">Professional Gaming (Heavy gaming and pro editing)</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Display Type:</label>
+                <select name="Display_Type_label">
+                    <option value="0">Business Brilliance (IPS for better color)</option>
+                    <option value="1">Corporate Clarity (TN for faster response)</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Display Resolution:</label>
+                <select name="Display_Resolution_label">
+                    <option value="0">Standard Precision (HD - 1366 x 768)</option>
+                    <option value="1">Professional Pixels (Full HD - 1920 x 1080)</option>
+                    <option value="2">Executive Vision (QHD or higher)</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Portability:</label>
+                <select name="Portability_label">
+                    <option value="0">Mobile Mastery (Very important)</option>
+                    <option value="1">Executive Expedience (Moderate)</option>
+                    <option value="2">Unfazed by Weight (Not a priority)</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Battery Life:</label>
+                <select name="Battery_Life_label">
+                    <option value="0">Enduring Endeavors (Long battery life)</option>
+                    <option value="1">Corporate Consistency (Moderate battery life)</option>
+                    <option value="2">Always Plugged In (Not a concern)</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Touchscreen:</label>
+                <select name="Touchscreen_label">
+                    <option value="0">Interactive Innovation (Yes, I prefer a touchscreen)</option>
+                    <option value="1">Professional Precision (No, I don't need a touchscreen)</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Ports & Connectivity:</label>
+                <select name="Ports_Connectivity_label">
+                    <option value="0">USB-C Connections</option>
+                    <option value="1">HDMI Harmony</option>
+                    <option value="2">Corporate Card Slots</option>
+                    <option value="3">Thunderbolt Triumph</option>
+                    <option value="4">Surprise me with Connectivity!</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Upgradability:</label>
+                <select name="Upgradability_label">
+                    <option value="0">Progressive Professional (I love upgrades!)</option>
+                    <option value="1">Business as Usual (Upgradability is not a priority)</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Keyboard Type:</label>
+                <select name="Keyboard_Type_label">
+                    <option value="0">Standard Efficiency</option>
+                    <option value="1">Professional Backlight</option>
+                    <option value="2">Business-Class Keys</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Security Features:</label>
+                <select name="Security_Features_label">
+                    <option value="0">Biometric Business (Fingerprint reader)</option>
+                    <option value="1">Security in Sophistication (No specific need)</option>
+                </select>
+            </div>
+            <div class="gopal">
+                <label>Warranty & Support:</label>
+                <select name="Warranty_Support_label">
+                    <option value="0">Enduring Assurance (Longer warranty, premium support)</option>
+                    <option value="1">Standard Support Suffices (Standard warranty is sufficient)</option>
+                </select>
+            </div>
+            <div class="gopal" ><button type="submit" class="custom-buttons">Submit</button></div>
+        </form>
+        
+    </div>
+</body>
+</html>
